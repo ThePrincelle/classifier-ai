@@ -1,0 +1,3 @@
+[submodule "imap"]
+	path = imap
+	url = git@git.unistra.fr:ter-mail/IMAP
