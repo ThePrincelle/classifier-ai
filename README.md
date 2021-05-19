@@ -57,7 +57,7 @@ Pour réutiliser cet export et éviter le téléchargement des données, utilise
 python3 main.py -i
 ```
 
-ce dernier va utiliser l'adresse mail indiquée dans le fichier `.env` ou donnée dans les instructions au démarrage du programme. 
+cette option va utiliser l'adresse mail indiquée dans le fichier `.env` ou donnée dans les instructions au démarrage du programme. 
 
 PS: Bien que les données soient déjà présentes, toutes les informations de connexion doivent être présentes au lancement du programme.
 
