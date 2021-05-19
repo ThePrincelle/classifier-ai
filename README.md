@@ -66,7 +66,7 @@ PS: Bien que les données soient déjà présentes, toutes les informations de c
 Importez la fonction `main` de [main.py](./main.py`. 
 
 ```python
-from classifier-ai import main as classfier
+from classifier-ai.main import main as classfier
 
 login_info = {
     'email': "mail-classfier@master-sil.fr"
