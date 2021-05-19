@@ -3,26 +3,23 @@
 # Machine Learning processing for classifier
 # Created by Maxime Princelle
 # --------------------------------------
-import time
 
 import numpy as np
 import pandas as pd
-from sklearn.cluster import KMeans
 from sklearn.feature_extraction.text import TfidfVectorizer, ENGLISH_STOP_WORDS
 from sklearn.metrics.pairwise import linear_kernel
-from sklearn.preprocessing import normalize
 
 
-def top_tfidf_feats(row, features, top_n=20):
+def top_tfidf_features(row, features, top_n=20):
 	topn_ids = np.argsort(row)[::-1][:top_n]
 	top_feats = [(features[i], row[i]) for i in topn_ids]
 	df = pd.DataFrame(top_feats, columns=['features', 'score'])
 	return df
 
 
-def top_feats_in_doc(X, features, row_id, top_n=25):
+def top_features_in_doc(X, features, row_id, top_n=25):
 	row = np.squeeze(X[row_id].toarray())
-	return top_tfidf_feats(row, features, top_n)
+	return top_tfidf_features(row, features, top_n)
 
 
 def classifier(mails_df):
@@ -46,7 +43,7 @@ def classifier(mails_df):
 
 	features = vec.get_feature_names()
 	#print(features)
-	categories = top_feats_in_doc(vec_train, features, 1, 100)
+	categories = top_features_in_doc(vec_train, features, 1, 100)
 
 	#print(categories)
 	categorised_mails = {}
