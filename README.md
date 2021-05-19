@@ -27,7 +27,9 @@ Le programme fonctionne avec Python 3.
 
 Exécutez le programme principal: 
 
-`python3 main.py` 
+```bash
+python3 main.py
+```
 
 et suivez les instrucutions.
 
@@ -43,13 +45,17 @@ Lors des tests, le téléchargement des données peut être long, pour remédier
 
 Pour exporter les données, rajoutez l'option `-e` à l'appel du programme principal : 
 
-`python3 main.py -e` 
+```bash
+python3 main.py -e
+```
 
 Après téléchargement, vous obtiendrez un fichier `.pickle` (format pour DataFrame Pandas) avec le nom suivant : `export_{email_address}.pickle`.
 
 Pour réutiliser cet export et éviter le téléchargement des données, utilisez l'option `-i` : 
 
-`python3 main.py -i` 
+```bash
+python3 main.py -i
+```
 
 ce dernier va utiliser l'adresse mail indiquée dans le fichier `.env` ou donnée dans les instructions au démarrage du programme. 
 
