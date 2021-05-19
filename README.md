@@ -70,8 +70,8 @@ from classifier-ai import main as classfier
 
 login_info = {
     'email': "mail-classfier@master-sil.fr"
-	'password': "VerySecurePassword"
-	'server': "partage.unistra.fr"
+    'password': "VerySecurePassword"
+    'server': "partage.unistra.fr"
 }
 
 categorized_mails = classifier(login_info)
