@@ -5,9 +5,9 @@
 # --------------------------------------
 
 import pandas as pd
-from classifier import classifier
-from imap.imap import IMAP as imap
-from input_cli import input_cli_start, ImapLoginInfo
+from .classifier import classifier
+from .imap.imap import IMAP as imap
+from .input_cli import input_cli_start, ImapLoginInfo
 from dotenv import load_dotenv
 import os
 import sys

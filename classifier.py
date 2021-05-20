@@ -8,6 +8,7 @@ import numpy as np
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer, ENGLISH_STOP_WORDS
 from sklearn.metrics.pairwise import linear_kernel
+import os
 
 
 def top_tfidf_features(row, features, top_n=20):
@@ -24,9 +25,12 @@ def top_features_in_doc(X, features, row_id, top_n=25):
 
 def classifier(mails_df):
 	mails_df_copy = mails_df
+ 
+	# Get path
+	main_path = os.getenv('CLASSIFIER_AI_PATH', "./")
 
 	# Get stopwords
-	stopwords_txt_fr = open("stopwords_fr.txt", "r")
+	stopwords_txt_fr = open(f"{main_path}stopwords_fr.txt", "r")
 	stopwords_fr = stopwords_txt_fr.read().split('\n')
 	stopwords = ENGLISH_STOP_WORDS.union(stopwords_fr)
 	#print(stopwords)
