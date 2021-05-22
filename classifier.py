@@ -28,9 +28,10 @@ def classifier(mails_df):
  
 	# Get path
 	main_path = os.getenv('CLASSIFIER_AI_PATH', "./")
+	stopwords_path = main_path + "stopwords_fr.txt"
 
 	# Get stopwords
-	stopwords_txt_fr = open(f"{main_path}stopwords_fr.txt", "r")
+	stopwords_txt_fr = open(stopwords_path, "r")
 	stopwords_fr = stopwords_txt_fr.read().split('\n')
 	stopwords = ENGLISH_STOP_WORDS.union(stopwords_fr)
 	#print(stopwords)
