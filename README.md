@@ -4,7 +4,8 @@
 
 Email classification program powered by machine learning.
 
-Report linked to this project: [TER - Rapport Final.pdf](https://s3.princelle.org/share/TER-Rapport-Final-Maxime-Princelle.pdf).
+Report linked to this project: [TER - Rapport Final - Maxime Princelle.pdf](https://github.com/ThePrincelle/classifier-ai/files/11948670/TER.-.Rapport.Final.-.Maxime.Princelle.pdf).
+
 
 By [Maxime Princelle](https://contact.princelle.org).
 
